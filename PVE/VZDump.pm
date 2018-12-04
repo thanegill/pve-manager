@@ -600,7 +600,7 @@ sub getlock {
     }
 
     if (!$maxwait) {
-	debugmsg ('err', "can't aquire lock '$lockfile' (wait = 0)", undef, 1);
+	debugmsg ('err', "can't acquire lock '$lockfile' (wait = 0)", undef, 1);
 	exit (-1);
     }
 
@@ -624,7 +624,7 @@ sub getlock {
     my $err = $@;
 
     if ($err) {
-	debugmsg ('err', "can't aquire lock '$lockfile' - $err", undef, 1);
+	debugmsg ('err', "can't acquire lock '$lockfile' - $err", undef, 1);
 	exit (-1);
     }
 
